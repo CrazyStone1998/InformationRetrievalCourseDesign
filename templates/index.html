@@ -1,0 +1,4224 @@
+
+
+  <div class="main-ft">
+    <div class="main-panel" name="9689718">
+
+
+
+  <div class="main-panel-useful" data-rid="9689718" data-is_owner="false" data-can_vote="true" data-is_tv="False">
+  <button class="btn useful_count 9689718 j a_show_login">
+      有用 7794
+  </button>
+  <button class="btn useless_count 9689718 j a_show_login">
+      没用 293
+  </button>
+    <span class="spoiler not-reported j a_show_login" data-rid="9689718">      这篇影评有剧透    </span>
+</div>
+
+      <div class="main-sharing">
+
+
+
+
+
+
+
+<style>
+  .footer-sharing {
+    text-align: right;
+  }
+</style>
+<div class="review-bar">
+    <div class="review-bar-donate">
+      <div style="display: none;">
+
+
+<link href="https://img3.doubanio.com/f/arya/dcc60592dc720e0067c6933112b4e26f19fb7a68/css/donate.css" rel="stylesheet">
+
+<script>
+;(function() {
+    var state = window.__dbDonateState = {
+        isLogin: false,
+        step: 0,
+        author: {
+            name: '罗罔极',
+            url: 'https://www.douban.com/people/163694915/'
+        },
+        moneySlot: [1, 2, 5, 10],
+        is_balance_enough: true,
+        can_post_status: 'True' === 'True'
+    };
+})();
+</script>
+
+<script type="text/javascript" src="https://img3.doubanio.com/f/arya/fb375a32c6f73dddcc60aafc4efd6eaed80ffecb/js/libs/autosize.min.js"></script>
+<script type="text/javascript" src="https://img3.doubanio.com/f/arya/c4ab132ff4d3d64a83854c875ea79b8b541faf12/js/libs/qrcode.min.js"></script>
+<script type="text/javascript" src="https://img3.doubanio.com/f/arya/796af3d09cf2c6c2cd1700c1f1dbdfabe2b2b527/js/libs/shani.js"></script>
+<script type="text/javascript" src="https://img3.doubanio.com/f/arya/63efa285f8ebf84212a770fa17ba9ede5f660b1b/js/libs/push.js"></script>
+<script type="text/javascript" src="https://img3.doubanio.com/f/arya/f88ebc3c8464ad223d5eec0fbc09f0f138b3d360/js/donate.es6"></script>
+
+<!-- 创建支付订单 -->
+<script type="text/template" id="tpl-donate-step0">
+    <form method="POST" class="donate-submit-form" action="/j/donate/donate_create">
+        <input required name="obj_kind" type="text" value="1012"/>
+        <input required name="obj_id" type="text" value="9689718"/>
+        <input required name="money" type="text" value="{{ state.order ? state.order.money : '' }}"/>
+        <input name="comment" type="text" value="{{ (state.order && state.order.comment) ? state.order.comment : '' }}"/>
+        <input name="sync" type="checkbox" value="1" {{ (!state.order || state.order.sync) ? 'checked' : '' }} />
+    </form>
+    <div class="donate-step0">
+        <div class="donate-money-list-wrapper">
+            <div class="donate-money-cursor-section">
+                <div class="donate-money-cursor _hidden"></div>
+            </div>
+            <div class="donate-money-list">
+                {% for idx, money in state.moneySlot.slice(0, 4) %}
+                <div class="donate-money {{ ((state.order && money === state.order.money) || (!state.order && +idx === 2)) ? '_selected _cur' : '' }}" data-value="{{ money }}">
+                    <div class="donate-money-circle">
+                        <span class="donate-money-number">{{ money }}</span>
+                        <span class="donate-money-unit">元</span>
+                    </div>
+                    <div class="donate-money-text">
+                        {{ money }} 元
+                    </div>
+                    <div class="donate-money-msg-box">无</div>
+                </div>
+                {% end %}
+                <div
+                    class="donate-money {{ (state.order && state.moneySlot.indexOf(state.order.money) < 0) ? '_selected' : '' }}"
+                    data-value="{{ (state.order && state.moneySlot.indexOf(state.order.money) < 0) ? state.order.money : '' }}"
+                >
+                    <div class="donate-money-circle">
+                        <span class="donate-money-number">?</span>
+                    </div>
+                    <div class="donate-money-text">
+                        <input autocomplete="off" type="text"
+                               name="custom-donate-money"
+                               placeholder="填写金额"
+                               value="{{ (state.order && state.moneySlot.indexOf(state.order.money) < 0) ? state.order.money : '' }}"
+                        >
+                    </div>
+                    <div class="donate-money-msg-box">无</div>
+                </div>
+            </div>
+        </div>
+        <div class="donate-comment">
+            <textarea name="comment" cols="60" type="text" placeholder="给作者捎句话" autocomplete="off" rows="1">{{ (state.order && state.order.comment) ? state.order.comment.trim() : '' }}</textarea>
+        </div>
+        <div class="donate-action">
+            <a class="donate-btn" href="javascript:;">好，赏了</a>
+        </div>
+        <div class="donate-bottom">
+                <span class="tips">赞赏行为不会影响评论的排序</span>
+            <label class="donate-sync" {{ (!state.can_post_status) ? 'disabled' : '' }}>
+                <input name="sync" type="checkbox" value="1" {{ (!state.can_post_status) ? 'disabled' : '' }} {{ ((!state.order || state.order.sync) && state.can_post_status) ? 'checked' : '' }} /> 同步到豆瓣广播
+            </label>
+        </div>
+    </div>
+</script>
+
+<!-- 选择支付方式 -->
+<script type="text/template" id="tpl-donate-step1">
+    <form method="POST" class="donate-submit-form" action="/j/donate/donate_pay">
+        <input required name="channel" type="text" value="0"/>
+        <input required name="order_id" type="text" value="{{ state.order.id }}"/>
+    </form>
+    <div class="donate-step1">
+        <div class="donate-channel-list-header">
+            {{ state.order.money }} 元
+        </div>
+        <div class="donate-channel-list-wrapper">
+            <div class="donate-channel-list">
+                <div class="donate-channel" data-channel="1">
+                    用支付宝支付
+                </div>
+                <div class="donate-channel" data-channel="2">
+                    用微信支付
+                </div>
+                {% if state.isLogin %}
+                    <div class="donate-channel" data-channel="3" {{ state.is_balance_enough ? '' : 'disabled="true"' }}>
+                        用豆瓣零钱支付
+                    </div>
+                {% end %}
+            </div>
+        </div>
+        <div class="donate-channel-footer">
+            <a href="https://www.douban.com/mine/wallet/#/help" target="_blank">常见问题和帮助</a>
+        </div>
+    </div>
+</script>
+
+<!-- 支付宝支付 -->
+<script type="text/template" id="tpl-donate-step2">
+    <div class="donate-step2">
+        <div class="donate-channel-list-header">
+            {{ state.order.channel_cn }}{{ state.order.channel_cn.endsWith('支付') ? '' : '支付' }} {{ state.order.money }} 元
+        </div>
+        <div class="donate-alipay-qrcode" data-src="{{ state.url }}" data-id="alipay-qr-img">
+            <iframe frameborder="0" src="{{ state.url }}"></iframe>
+        </div>
+        <div class="donate-channel-change-lnk">
+            <a href="javascript:;">更换支付方式</a>
+        </div>
+        <div class="donate-channel-footer">
+            <a href="https://www.douban.com/mine/wallet/#/help" target="_blank">常见问题和帮助</a>
+        </div>
+    </div>
+</script>
+
+<!-- 微信扫码支付 -->
+<script type="text/template" id="tpl-donate-step3">
+    <div class="donate-step3">
+        <div class="donate-channel-list-header">
+            {{ state.order.channel_cn }}付款 {{ state.order.money }} 元
+        </div>
+        <div class="donate-tenpay-qrcode" data-src="{{ state.url }}" data-id="tenpay-qr-img">
+            <div id="tenpay-qr-img"></div>
+        </div>
+        <div class="donate-tenpay-tips">
+            请用手机微信扫描二维码，按操作提示完成支付
+        </div>
+        <div class="donate-channel-change-lnk">
+            <a href="javascript:;">更换支付方式</a>
+        </div>
+        <div class="donate-channel-footer">
+            <a href="https://www.douban.com/mine/wallet/#/help" target="_blank">常见问题和帮助</a>
+        </div>
+    </div>
+</script>
+
+<!-- 支付失败 -->
+<script type="text/template" id="tpl-donate-step5">
+    <div class="donate-step5">
+        <div class="donate-channel-list-header">
+            {{ state.order.channel_cn }}付款 {{ state.order.money }} 元
+        </div>
+        <div class="donate-channel-msg-box _error">{{ state.message }}</div>
+        <div class="donate-channel-list-wrapper">
+            <div class="donate-channel-list">
+                <div class="donate-channel" data-channel="1" disabled>
+                    付款完成
+                </div>
+                <div class="donate-channel-change">
+                    更换支付方式
+                </div>
+            </div>
+        </div>
+        <div class="donate-channel-footer">
+            <a href="https://www.douban.com/mine/wallet/#/help" target="_blank">常见问题和帮助</a>
+        </div>
+    </div>
+</script>
+
+<!-- 支付成功 -->
+<script type="text/template" id="tpl-donate-step6">
+    <div class="donate-step6">
+        <div class="donate-success-header">
+            成功赞赏 {{ state.order.money }} 元
+        </div>
+        <div class="donate-success-user">
+            <div class="donate-success-user-avatar">
+                <a href="{{ state.order.user.url }}" target="_blank">
+                    <img alt="头像" src="{{ state.order.user.avatar }}"/>
+                </a>
+            </div>
+            <a class="donate-success-user-url" href="{{ state.order.user.url }}" target="_blank">{{ state.order.user.name }}</a>
+        </div>
+        <div class="donate-success-copy">
+            <span>{{ state.order.copy || '感谢你的鼓励 XD' }}</span>
+        </div>
+    </div>
+</script>
+
+      </div>
+      <div class="donate-sec js-donate-btn">
+        <span class="donate">赞赏</span>
+        <span class="donate-num js-donate-count-wrapper">&nbsp;<span class="js-donate-count">25</span></span>
+      </div>
+    </div>
+
+  <div class="footer-sharing">
+
+
+
+
+
+
+
+
+
+    <div class="sharing" data-target="{&quot;url&quot;: &quot;https://movie.douban.com/review/9689718/&quot;, &quot;desc&quot;: &quot;\u4e24\u5929\uff0c\u6211\u8dd1\u4e86\u4e24\u8d9f\u7535\u5f71\u9662\u3002 \u540e\u53f0\uff0c\u65e9\u5df2\u6709\u4e0d\u5c11\u4eba\u50ac\u66f4\u3002 \u4f46\uff0c\u6211\u4ecd\u7136\u4e0d\u75be\u4e0d\u5f90\uff0c\u7cbe\u7ec6\u5730\u5199\u4e0b\u8fd9\u7bc7\u3002 \u4e0d\u8e6d\u70ed\u70b9\uff0c\u662f\u4e3a\u4e86\u7f15\u6e05\u7ebf\u7d22\u3002 \u7528\u4e00\u7bc7\u6587\u7ae0\uff0c\u89e3\u5f00\u5b83\u7684\u79cd\u79cd\u8c1c\u56e2\u2014\u2014 \u300a\u5f71\u300b \u6bcf\u5f53\u7535\u5f71\u6563\u573a\uff0c\u6211\u90fd\u542c\u89c1...&quot;, &quot;pic&quot;: &quot;https://img3.doubanio.com/view/thing_review/large/public/p1987654.jpg&quot;, &quot;title&quot;: &quot;\u5c0f\u827e\u900f\u8fc7\u95e8\u7a97\uff0c\u7a76\u7adf\u770b\u89c1\u4e86\u4ec0\u4e48\uff1f\u2014\u2014\u300a\u5f71\u300b\u7ec8\u6781\u89e3\u8bfb&quot;}">
+
+        <div class="sharing-button">
+            <div class="sharing-douban">
+
+
+
+
+        <div class="rec-sec">
+
+
+    <span class="rec">
+
+            <a data-user_id="0" href="https://www.douban.com/accounts/register?reason=collect" share-id="9689718" data-mode="plain" data-name="小艾透过门窗，究竟看见了什么？——《影》终极解读" data-type="com.douban.movie" data-desc="两天，我跑了两趟电影院。 后台，早已有不少人催更。 但，我仍然不疾不徐，精细地写下这篇。 不蹭热点，是为了缕清线索。 用一篇文章，解开它的种种谜团—— 《影》 每当电影散场，我都听见..." data-href="https://movie.douban.com/review/9689718/" data-image="https://img3.doubanio.com/view/thing_review/large/public/p1987654.jpg" data-properties="{&quot;href&quot;:&quot;http:\/\/movie.douban.com\/subject\/4864908\/&quot;,&quot;name&quot;:&quot;影‎ (2018)&quot;,&quot;uid&quot;:&quot;4864908&quot;}" data-redir="https://movie.douban.com/static/dshare_proxy.html" data-text="" data-apikey="" data-curl="" data-count="10" data-object_kind="1012" data-object_id="9689718" data-target_type="rec" data-target_action="0" data-action_props="{&quot;subject_url&quot;:&quot;http:\/\/movie.douban.com\/subject\/4864908\/&quot;,&quot;review_title&quot;:&quot;小艾透过门窗，究竟看见了什么？——《影》终极解读&quot;,&quot;review_url&quot;:&quot;https:\/\/movie.douban.com\/review\/9689718\/&quot;,&quot;subject_title&quot;:&quot;影‎ (2018)&quot;}" data-btn_text="转发" data-heading="转发到豆瓣" data-sanity_key="_fa690" class="j a_show_login lnk-sharing lnk-douban-sharing">
+
+                            转发 <span class="rec-num">415</span>
+
+            </a>
+    </span>
+
+
+    </div>
+
+            </div>
+            <span class="sharing-indicator"></span>
+        </div>
+
+            <div class="sharing-layer is-hidden">
+                <div class="sharing-wechat">
+                    <span class="sharing-icon__wechat">微信扫码</span>
+                    <div class="sharing-wechat-qrcode"></div>
+                </div>
+
+
+                <ul class="sharing-list">
+                    <li class="sharing-icon__weibo" data-share="weibo">新浪微博</li>
+                    <li class="sharing-icon__qq" data-share="qq">QQ好友</li>
+                    <li class="sharing-icon__qzone" data-share="qzone">QQ空间</li>
+                </ul>
+            </div>
+
+
+
+    </div>
+
+
+  </div>
+
+</div>
+
+      </div>
+    </div>
+  </div>
+
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+<div id="comments" class="comment-list" data-start="0" data-reply_length="90">
+
+
+
+
+
+
+
+  <div class="comment-item" id="10011228" data-cid="10011228" data-user_name="白玛lotus" data-user_url="https://www.douban.com/people/145612121/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/145612121/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u145612121-31.jpg" alt="白玛lotus"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/145612121/">白玛lotus</a>  (叛逃中审视自己的懦弱)
+        <span>2018-10-06 13:10:43</span>
+      </div>
+
+
+
+      <p class="comment-text">有理有据，佩服</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u145612121 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10011228" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10011804" data-cid="10011804" data-user_name="竹本有心" data-user_url="https://www.douban.com/people/zhubenwuxin/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/zhubenwuxin/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u1684527-1.jpg" alt="竹本有心"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/zhubenwuxin/">竹本有心</a>  (我是蓝蓝)
+        <span>2018-10-06 15:57:08</span>
+      </div>
+
+
+
+      <p class="comment-text">这是我看到现在最令人服气的一篇影评。</p>
+
+      <div class="op-lnks">
+
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u1684527 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10011804" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10011991" data-cid="10011991" data-user_name="charles" data-user_url="https://www.douban.com/people/12966744/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/12966744/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u12966744-2.jpg" alt="charles"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/12966744/">charles</a>
+        <span>2018-10-06 16:49:07</span>
+      </div>
+
+
+
+      <p class="comment-text">“情节没有交代，镜州和小艾的感情从何而来，所以这两个人并没有打动我。”我同意这位大V，所以我自己改编了，请大家指正：<a href="https://www.douban.com/link2/?url=https%3A%2F%2Fmovie.douban.com%2Freview%2F9687672%2F">https://movie.douban<wbr>.com/review/9687672/<wbr></a></p>
+
+      <div class="op-lnks">
+
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u12966744 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10011991" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10013119" data-cid="10013119" data-user_name="zwq" data-user_url="https://www.douban.com/people/178467425/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/178467425/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u178467425-1.jpg" alt="zwq"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/178467425/">zwq</a>
+        <span>2018-10-06 21:31:35</span>
+      </div>
+
+
+
+      <p class="comment-text">这是我看到最好的影评，也是我最愿意相信的版本。</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u178467425 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10013119" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10013220" data-cid="10013220" data-user_name="summer" data-user_url="https://www.douban.com/people/164793350/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/164793350/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u164793350-1.jpg" alt="summer"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/164793350/">summer</a>
+        <span>2018-10-06 21:47:51</span>
+      </div>
+
+
+
+      <p class="comment-text">make sense</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u164793350 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10013220" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10013399" data-cid="10013399" data-user_name="Ran" data-user_url="https://www.douban.com/people/185531313/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/185531313/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u185531313-1.jpg" alt="Ran"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/185531313/">Ran</a>
+        <span>2018-10-06 22:29:41</span>
+      </div>
+
+
+
+      <p class="comment-text">这个影评我服  也很符合我内心的想法✔</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u185531313 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10013399" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10013527" data-cid="10013527" data-user_name="王大圣" data-user_url="https://www.douban.com/people/146226516/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/146226516/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u146226516-4.jpg" alt="王大圣"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/146226516/">王大圣</a>
+        <span>2018-10-06 22:55:48</span>
+      </div>
+
+
+
+      <p class="comment-text">没错，对极了。当下中国的环境，无法通过周围环境去辨别一部电影的价值，只能自己好好欣赏了。</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u146226516 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10013527" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10013667" data-cid="10013667" data-user_name="白雪谣" data-user_url="https://www.douban.com/people/52987027/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/52987027/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u52987027-2.jpg" alt="白雪谣"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/52987027/">白雪谣</a>  (从晨至昏，从来到去)
+        <span>2018-10-06 23:25:17</span>
+      </div>
+
+
+
+      <p class="comment-text">写的很好👍看到田战问子虞想不想取而代之时我就在想田战可能是沛良的人，后来看到沛良派出的刺客轻而易举地找到密室里的子虞时更加确认这一点</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u52987027 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10013667" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10013811" data-cid="10013811" data-user_name="晓晓茉莉" data-user_url="https://www.douban.com/people/164443330/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/164443330/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u164443330-1.jpg" alt="晓晓茉莉"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/164443330/">晓晓茉莉</a>
+        <span>2018-10-06 23:46:55</span>
+      </div>
+
+
+
+      <p class="comment-text">就在刚刚我竟大言不惭的说我看懂了，看完您的影评，恍然大悟，豁然开朗……电影结束后我等了很久很久，我和同伴说，我想看境州坐在王位上，现在觉得自己好惭愧啊，他活不了了，悲伤……</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u164443330 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10013811" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10014058" data-cid="10014058" data-user_name="摩诘" data-user_url="https://www.douban.com/people/140975109/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/140975109/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u140975109-1.jpg" alt="摩诘"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/140975109/">摩诘</a>
+        <span>2018-10-07 00:34:43</span>
+      </div>
+
+
+
+      <p class="comment-text">博主牛逼！有一个问题想问，一开始旁白说：小艾正面临一生中最困难的选择。结尾的时候小艾冲到门边，我认为她是在选择忠于丈夫，告诉文武大臣实情，还是顺从镜州的说辞，遂了私情。你的解释是目睹田战杀掉镜州，请问这之中何来选择？有点说不通吧，想和博主讨论一下！</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u140975109 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10014058" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10014158" data-cid="10014158" data-user_name="奶黄包" data-user_url="https://www.douban.com/people/171967045/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/171967045/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u171967045-1.jpg" alt="奶黄包"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/171967045/">奶黄包</a>
+        <span>2018-10-07 00:59:50</span>
+      </div>
+
+
+
+      <p class="comment-text">好熟悉的影评，不知是谁抄了谁的</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u171967045 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10014158" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10014263" data-cid="10014263" data-user_name="酸梅干超人  了" data-user_url="https://www.douban.com/people/3053207/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/3053207/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u3053207-11.jpg" alt="酸梅干超人  了"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/3053207/">酸梅干超人  了</a>  (艹人南波丸)
+        <span>2018-10-07 01:31:59</span>
+      </div>
+
+
+
+      <p class="comment-text">最后的眼神实在是被惊恐而不是吃饱了没事乱看，外面出乱子了！如果田战动手也才符合朝堂权利斗争下最后谁都不甘心的想法</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u3053207 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10014263" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10014702" data-cid="10014702" data-user_name="酥糖" data-user_url="https://www.douban.com/people/185541181/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/185541181/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u185541181-1.jpg" alt="酥糖"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/185541181/">酥糖</a>
+        <span>2018-10-07 07:26:37</span>
+      </div>
+
+
+
+      <p class="comment-text">版权归作者所有，任何形式转载请联系作者。<br>作者：罗罔极（来自豆瓣）<br>来源：<a href="https://www.douban.com/link2/?url=https%3A%2F%2Fmovie.douban.com%2Freview%2F9689718%2F">https://movie.douban<wbr>.com/review/9689718/<wbr></a><br><br>田战必杀镜州，田战依附沛良或者子瑜都有充足理由，田战或敬畏于他们的权力，或。诚服于他们的人格魅力，绝不是仅仅“拿钱办事”而已。但是镜州只是个替身，替身对于田战没有任何敬畏心可言。而且田战是活着的人唯二知道镜州底细的人，稍有政治头脑的人都得想到，真等到镜州篡位成功羽翼丰满了以后，田战能有活路吗？所以还不如撑着混乱杀了镜州。</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u185541181 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10014702" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10014973" data-cid="10014973" data-user_name="郭小慢" data-user_url="https://www.douban.com/people/91560202/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/91560202/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u91560202-3.jpg" alt="郭小慢"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/91560202/">郭小慢</a>
+        <span>2018-10-07 09:44:20</span>
+      </div>
+
+
+
+      <p class="comment-text">评论的部分对，部分错的离谱…</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u91560202 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10014973" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10014996" data-cid="10014996" data-user_name="石破天" data-user_url="https://www.douban.com/people/185551160/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/185551160/"><img width="48" height="48" src="https://img1.doubanio.com/icon/user_normal.jpg" alt="石破天"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/185551160/">石破天</a>
+        <span>2018-10-07 09:50:39</span>
+      </div>
+
+
+
+      <p class="comment-text">这是看过这部电影最好的影评！国人的电影欣赏审美水平确实低下</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u185551160 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10014996" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10015060" data-cid="10015060" data-user_name="习斋布衣" data-user_url="https://www.douban.com/people/170512417/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/170512417/"><img width="48" height="48" src="https://img1.doubanio.com/icon/u170512417-7.jpg" alt="习斋布衣"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/170512417/">习斋布衣</a>  (惜时如金)
+        <span>2018-10-07 10:15:15</span>
+      </div>
+
+
+
+      <p class="comment-text">影子就是影子，是没法服众的，除非是遇上小艾这样水性杨花的女人。<br>话说电影中，对青萍与境州（子瑜），小艾与境州的感情交代得不够，或者根本没交代。<br>另，关晓彤是片中最大的败笔，尤其是高音破声，适合演叛逆期少女。</p>
+
+      <div class="op-lnks">
+
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u170512417 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10015060" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10015089" data-cid="10015089" data-user_name="习斋布衣" data-user_url="https://www.douban.com/people/170512417/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/170512417/"><img width="48" height="48" src="https://img1.doubanio.com/icon/u170512417-7.jpg" alt="习斋布衣"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/170512417/">习斋布衣</a>  (惜时如金)
+        <span>2018-10-07 10:23:00</span>
+      </div>
+
+
+
+      <p class="comment-text">作为一部极有中国古典风的电影，台词毫无预制相匹配的美感，倒是胡军出场和吴磊的台词水平略高，后来关晓彤出场，台词又急转直下。</p>
+
+      <div class="op-lnks">
+
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u170512417 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10015089" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10015494" data-cid="10015494" data-user_name="宁波哥哥" data-user_url="https://www.douban.com/people/82910448/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="10014124">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/82910448/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u82910448-3.jpg" alt="宁波哥哥"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/82910448/">宁波哥哥</a>  (我是个逗比所以来豆瓣了)
+        <span>2018-10-07 12:18:08</span>
+      </div>
+
+
+
+        <div class="reply-quote">
+          <span class="short">该回应已被删除</span>
+          <span class="all">该回应已被删除</span>
+          <span class="pubdate"><a href="https://www.douban.com/people/140975109/">摩诘</a></span>
+        </div>
+
+
+      <p class="comment-text">这影评最后自己矛盾了……一会子虞是田战偶像，一会子虞被田战出卖……</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u82910448 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10015494" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10015515" data-cid="10015515" data-user_name="摩诘" data-user_url="https://www.douban.com/people/140975109/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="10015494">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/140975109/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u140975109-1.jpg" alt="摩诘"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/140975109/">摩诘</a>
+        <span>2018-10-07 12:22:51</span>
+      </div>
+
+
+
+        <div class="reply-quote">
+          <span class="short">这影评最后自己矛盾了……一会子虞是田战偶像，一会子虞被田战出卖……</span>
+          <span class="all">这影评最后自己矛盾了……一会子虞是田战偶像，一会子虞被田战出卖……</span>
+          <span class="pubdate"><a href="https://www.douban.com/people/82910448/">宁波哥哥</a></span>
+        </div>
+
+
+      <p class="comment-text">是的 注意到了</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u140975109 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10015515" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10015522" data-cid="10015522" data-user_name="摩诘" data-user_url="https://www.douban.com/people/140975109/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="10014702">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/140975109/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u140975109-1.jpg" alt="摩诘"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/140975109/">摩诘</a>
+        <span>2018-10-07 12:24:06</span>
+      </div>
+
+
+
+        <div class="reply-quote">
+          <span class="short">版权归作者所有，任何形式转载请联系作者。
+作者：罗罔极（来自豆瓣）
+来源：https://movie.d...</span>
+          <span class="all">版权归作者所有，任何形式转载请联系作者。
+作者：罗罔极（来自豆瓣）
+来源：https://movie.douban.com/review/9689718/
+
+田战必杀镜州，田战依附沛良或者子瑜都有充足理由，田战或敬畏于他们的权力，或。诚服于他们的人格魅力，绝不是仅仅“拿钱办事”而已。但是镜州只是个替身，替身对于田战没有任何敬畏心可言。而且田战是活着的人唯二知道镜州底细的人，稍有政治头脑的人都得想到，真等到镜州篡位成功羽翼丰满了以后，田战能有活路吗？所以还不如撑着混乱杀了镜州。</span>
+          <a href="javascript:;" class="toggle_reply">...</a>
+          <span class="pubdate"><a href="https://www.douban.com/people/185541181/">酥糖</a></span>
+        </div>
+
+
+      <p class="comment-text">那么选择如何解释？而且田战是有倒戈的，他不是一个真正忠义的人</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u140975109 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10015522" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10015539" data-cid="10015539" data-user_name="宁波哥哥" data-user_url="https://www.douban.com/people/82910448/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="10015515">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/82910448/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u82910448-3.jpg" alt="宁波哥哥"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/82910448/">宁波哥哥</a>  (我是个逗比所以来豆瓣了)
+        <span>2018-10-07 12:28:48</span>
+      </div>
+
+
+
+        <div class="reply-quote">
+          <span class="short">是的 注意到了</span>
+          <span class="all">是的 注意到了</span>
+          <span class="pubdate"><a href="https://www.douban.com/people/140975109/">摩诘</a></span>
+        </div>
+
+
+      <p class="comment-text">主公的眼线应该全被隐藏了，没有出镜，一开始玩女人不务正业，给奸细鲁爱卿看，就在韬光养晦了，非要让假邓超弹琴也是为了试探。</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u82910448 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10015539" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10015552" data-cid="10015552" data-user_name="摩诘" data-user_url="https://www.douban.com/people/140975109/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="10015539">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/140975109/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u140975109-1.jpg" alt="摩诘"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/140975109/">摩诘</a>
+        <span>2018-10-07 12:31:25</span>
+      </div>
+
+
+
+        <div class="reply-quote">
+          <span class="short">主公的眼线应该全被隐藏了，没有出镜，一开始玩女人不务正业，给奸细鲁爱卿看，就在韬光养晦...</span>
+          <span class="all">主公的眼线应该全被隐藏了，没有出镜，一开始玩女人不务正业，给奸细鲁爱卿看，就在韬光养晦了，非要让假邓超弹琴也是为了试探。</span>
+          <a href="javascript:;" class="toggle_reply">...</a>
+          <span class="pubdate"><a href="https://www.douban.com/people/82910448/">宁波哥哥</a></span>
+        </div>
+
+
+      <p class="comment-text">你觉得田战也不是？但是剧中给田战表情变化的镜头确实特别多，看电影的时候心里有点奇怪，看到这篇影评觉得很有道理</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u140975109 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10015552" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10015641" data-cid="10015641" data-user_name="Clara卉卉" data-user_url="https://www.douban.com/people/81153111/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/81153111/"><img width="48" height="48" src="https://img3.doubanio.com/icon/user_normal_f.jpg" alt="Clara卉卉"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/81153111/">Clara卉卉</a>
+        <span>2018-10-07 12:51:23</span>
+      </div>
+
+
+
+      <p class="comment-text">2017年奥斯卡颁奖典礼公开乳华不是大家都看在眼里了么，当年就闹的不少华人不爽，这评论还以此为论据（不是阴谋论，而是这种低劣感太容易被塑造，不足以作为论据来论证观点啊）最讽刺的是大部分评低分豆友都是自诩自己是电影神圣的守护者，大部分人是认为国内电影垃圾看都不看就评论一两星的文艺青年，相反所谓的爱看动感电影的小年轻们抱着试试的心态进入电影院却被老谋子的诚意打动，回来豆瓣打四五星还被文青们骂水军不懂真正的艺术。</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u81153111 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10015641" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10015775" data-cid="10015775" data-user_name="一棵🌲" data-user_url="https://www.douban.com/people/185560995/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/185560995/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u185560995-1.jpg" alt="一棵🌲"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/185560995/">一棵🌲</a>
+        <span>2018-10-07 13:26:17</span>
+      </div>
+
+
+
+      <p class="comment-text">直述感觉，整个剧情很容易看懂。但有个细节bug我没反应过来，沛良验伤那段，田战可还没进入小树林啊，沛良凭什么使诈？只是因为传说中的“杨苍的刀好不了”而使诈吗？如果是这样，子虞的智商也太低了点吧。如果沛良只是使诈为什么要说破“新伤”这件事，这岂不打草惊蛇了吗？既然都说破了是“新伤”肯定是希望子虞路面，不要再拿境州做摆设。所以，这个bug是否是电影没有交代沛王的另一个眼线？这个眼线有可能是小艾吗？</p>
+
+      <div class="op-lnks">
+
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u185560995 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10015775" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10016235" data-cid="10016235" data-user_name="荒原" data-user_url="https://www.douban.com/people/143680658/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/143680658/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u143680658-2.jpg" alt="荒原"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/143680658/">荒原</a>
+        <span>2018-10-07 15:14:52</span>
+      </div>
+
+
+
+      <p class="comment-text">这部电影就是古代中国的缩影，高层为了权利绞尽脑汁，底层生灵涂炭，无辜的人惨死，循环往复。</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u143680658 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10016235" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10016274" data-cid="10016274" data-user_name="西瓜君" data-user_url="https://www.douban.com/people/182572741/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/182572741/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u182572741-1.jpg" alt="西瓜君"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/182572741/">西瓜君</a>
+        <span>2018-10-07 15:29:12</span>
+      </div>
+
+
+
+      <p class="comment-text">只知道看完之后觉得好看。。。</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u182572741 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10016274" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10016386" data-cid="10016386" data-user_name="thursday" data-user_url="https://www.douban.com/people/175464275/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/175464275/"><img width="48" height="48" src="https://img1.doubanio.com/icon/user_normal.jpg" alt="thursday"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/175464275/">thursday</a>
+        <span>2018-10-07 16:04:44</span>
+      </div>
+
+
+
+      <p class="comment-text">闪耀着理性的光辉</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u175464275 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10016386" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10016479" data-cid="10016479" data-user_name="酥糖" data-user_url="https://www.douban.com/people/185541181/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="10015522">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/185541181/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u185541181-1.jpg" alt="酥糖"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/185541181/">酥糖</a>
+        <span>2018-10-07 16:29:51</span>
+      </div>
+
+
+
+        <div class="reply-quote">
+          <span class="short">那么选择如何解释？而且田战是有倒戈的，他不是一个真正忠义的人</span>
+          <span class="all">那么选择如何解释？而且田战是有倒戈的，他不是一个真正忠义的人</span>
+          <span class="pubdate"><a href="https://www.douban.com/people/140975109/">摩诘</a></span>
+        </div>
+
+
+      <p class="comment-text">选择服从沛良或者选择服从子瑜都能解释的通，但是选择镜州那只能是说明导演和编剧没脑子。</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u185541181 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10016479" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10016518" data-cid="10016518" data-user_name="峡湾漫步" data-user_url="https://www.douban.com/people/155903869/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/155903869/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u155903869-2.jpg" alt="峡湾漫步"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/155903869/">峡湾漫步</a>
+        <span>2018-10-07 16:48:24</span>
+      </div>
+
+
+
+      <p class="comment-text">中国观众的审美提高得慢慢来，这个急不得。不少5分片子在三四线城市票房很好，这其实才是中国的主流现实，就跟中国大部分地区依然是在温饱线上一样。拿一个中西部地区人均只有不到5000美元的地方去跟人均几万美元的地方去比欣赏力，这不公平。</p>
+
+      <div class="op-lnks">
+
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u155903869 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10016518" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10016645" data-cid="10016645" data-user_name="八神菁菁" data-user_url="https://www.douban.com/people/2793396/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/2793396/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u2793396-6.jpg" alt="八神菁菁"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/2793396/">八神菁菁</a>
+        <span>2018-10-07 17:20:45</span>
+      </div>
+
+
+
+      <p class="comment-text">田战前面的半小时里一直一声不吭眼神晃荡，任由沛王对子虞凌辱而不言不语，后面突然就爆发了面对面的挑衅沛王，但凡这种前后突然形象反差巨大的角色必定藏着深一层的关系，不过我没想到他是沛王的人呐。</p>
+
+      <div class="op-lnks">
+
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u2793396 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10016645" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10016914" data-cid="10016914" data-user_name="四月是你的谎言" data-user_url="https://www.douban.com/people/155932664/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/155932664/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u155932664-1.jpg" alt="四月是你的谎言"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/155932664/">四月是你的谎言</a>
+        <span>2018-10-07 18:30:28</span>
+      </div>
+
+
+
+      <p class="comment-text">和公众号独立鱼电影昨天的影评有很多相似之处</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u155932664 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10016914" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10017042" data-cid="10017042" data-user_name="monica-ripley" data-user_url="https://www.douban.com/people/55292088/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/55292088/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u55292088-5.jpg" alt="monica-ripley"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/55292088/">monica-ripley</a>
+        <span>2018-10-07 19:00:55</span>
+      </div>
+
+
+
+      <p class="comment-text">我觉得讲的很好！👍</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u55292088 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10017042" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10017055" data-cid="10017055" data-user_name="无痕" data-user_url="https://www.douban.com/people/154166983/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/154166983/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u154166983-1.jpg" alt="无痕"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/154166983/">无痕</a>
+        <span>2018-10-07 19:03:00</span>
+      </div>
+
+
+
+      <p class="comment-text">目前看到最好最认可的影评。现在太多人特别是一些有影响力的大V,怎么对自己引流吸粉有利就怎么写，显然目前批判国师是最正确的一件事，悲哀。</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u154166983 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10017055" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10017071" data-cid="10017071" data-user_name="hiraeth" data-user_url="https://www.douban.com/people/146435710/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/146435710/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u146435710-30.jpg" alt="hiraeth"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/146435710/">hiraeth</a>
+        <span>2018-10-07 19:07:16</span>
+      </div>
+
+
+
+      <p class="comment-text">然而影片还是剪了太多，显的镜州的角色心理太单薄，很难入戏</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u146435710 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10017071" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10017184" data-cid="10017184" data-user_name="鮌淡" data-user_url="https://www.douban.com/people/9103652/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/9103652/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u9103652-2.jpg" alt="鮌淡"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/9103652/">鮌淡</a>
+        <span>2018-10-07 19:36:28</span>
+      </div>
+
+
+
+      <p class="comment-text">写得真好</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u9103652 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10017184" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10017302" data-cid="10017302" data-user_name="小盒纸酱" data-user_url="https://www.douban.com/people/yi6257/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/yi6257/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u61658652-6.jpg" alt="小盒纸酱"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/yi6257/">小盒纸酱</a>  (congratulations！)
+        <span>2018-10-07 20:11:34</span>
+      </div>
+
+
+
+      <p class="comment-text">想问一下，公主是怎么混进战队里的，不是秘密训练吗。。。想不通，这是不是漏洞</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u61658652 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10017302" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10017451" data-cid="10017451" data-user_name="人间清欢" data-user_url="https://www.douban.com/people/164450280/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/164450280/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u164450280-3.jpg" alt="人间清欢"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/164450280/">人间清欢</a>
+        <span>2018-10-07 20:51:53</span>
+      </div>
+
+
+
+      <p class="comment-text">《影》用了三亿？全片几个人，几个场景，三亿韩元都够了。</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u164450280 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10017451" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10017512" data-cid="10017512" data-user_name="道长要糖" data-user_url="https://www.douban.com/people/179693093/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/179693093/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u179693093-2.jpg" alt="道长要糖"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/179693093/">道长要糖</a>
+        <span>2018-10-07 21:16:58</span>
+      </div>
+
+
+
+      <p class="comment-text">如果田战为沛王眼线这个伏笔再稍微明显点，对于整部电影是更好的提升</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u179693093 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10017512" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10017645" data-cid="10017645" data-user_name="少年面条" data-user_url="https://www.douban.com/people/52944642/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/52944642/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u52944642-51.jpg" alt="少年面条"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/52944642/">少年面条</a>  (豆瓣电影可以一直存到老吗)
+        <span>2018-10-07 21:52:48</span>
+      </div>
+
+
+
+      <p class="comment-text">挺，写得很好。</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u52944642 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10017645" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10017686" data-cid="10017686" data-user_name="皓" data-user_url="https://www.douban.com/people/hao1020v/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/hao1020v/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u1780343-11.jpg" alt="皓"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/hao1020v/">皓</a>
+        <span>2018-10-07 22:02:30</span>
+      </div>
+
+
+
+      <p class="comment-text">这篇解惑啦，写得好</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u1780343 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10017686" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10017704" data-cid="10017704" data-user_name="kyo" data-user_url="https://www.douban.com/people/3896123/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/3896123/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u3896123-31.jpg" alt="kyo"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/3896123/">kyo</a>
+        <span>2018-10-07 22:05:24</span>
+      </div>
+
+
+
+      <p class="comment-text">写得不错</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u3896123 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10017704" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10017847" data-cid="10017847" data-user_name="NIU忙" data-user_url="https://www.douban.com/people/167808884/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/167808884/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u167808884-1.jpg" alt="NIU忙"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/167808884/">NIU忙</a>
+        <span>2018-10-07 22:33:31</span>
+      </div>
+
+
+
+      <p class="comment-text">我替兄弟把冯导的话再说一遍：有垃圾的电影，是因为有垃圾的观众</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u167808884 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10017847" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10017855" data-cid="10017855" data-user_name="🌼海口微联盟® 平" data-user_url="https://www.douban.com/people/180944934/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/180944934/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u180944934-1.jpg" alt="🌼海口微联盟® 平"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/180944934/">🌼海口微联盟® 平</a>
+        <span>2018-10-07 22:35:04</span>
+      </div>
+
+
+
+      <p class="comment-text">呵呵哒。影好看不代表无双很烂！无双就是比影好看十倍！</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u180944934 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10017855" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10017887" data-cid="10017887" data-user_name="zhuzhubupa" data-user_url="https://www.douban.com/people/150891685/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/150891685/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u150891685-1.jpg" alt="zhuzhubupa"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/150891685/">zhuzhubupa</a>
+        <span>2018-10-07 22:40:08</span>
+      </div>
+
+
+
+      <p class="comment-text">田战其实是双面间谍吧，不然都督这破身体居然在围攻下会没死，靖州最后和都督说“即使没有本人，也是会有替身的。”我看很多评论最后小艾看到了什么，靖州最大的渴望是回家，他的妈妈已经被杀死了，他其实已经没有家了，所以我觉得小艾最后看到的是靖州当众自杀，只有这样，“都督”这个人就彻底没了，结合他之前说的话，他是要让这个身份彻底结束，不想让别人再摆布他的人生。</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u150891685 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10017887" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10018138" data-cid="10018138" data-user_name="vicky allianz" data-user_url="https://www.douban.com/people/185586918/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/185586918/"><img width="48" height="48" src="https://img1.doubanio.com/icon/user_normal.jpg" alt="vicky allianz"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/185586918/">vicky allianz</a>
+        <span>2018-10-07 23:39:24</span>
+      </div>
+
+
+
+      <p class="comment-text">王的影子应该是眼线，而不是相貌相似的影子，否则，更容易害死王，所以王的影子是不成立的。（如果是王的影子杀死鲁严，害怕的应该是王自己！）王以为拿上来的是都督的人头，是王太轻信田战了，田战才能安排这个事情。田战和境州的命运都扯在了一起！所以，田战担心都督活着或者王活着，则田战必死，才犹犹豫豫地下朝！都督受伤后容貌大变，所以除了田战和境州、小艾，没有人会发现都督真身。境州和田战都是一步步被逼着造反的，只有谋反才可能安身。</p>
+
+      <div class="op-lnks">
+
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u185586918 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10018138" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10018300" data-cid="10018300" data-user_name="77在哪里" data-user_url="https://www.douban.com/people/70560661/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="10016914">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/70560661/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u70560661-5.jpg" alt="77在哪里"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/70560661/">77在哪里</a>
+        <span>2018-10-08 00:19:52</span>
+      </div>
+
+
+
+        <div class="reply-quote">
+          <span class="short">和公众号独立鱼电影昨天的影评有很多相似之处</span>
+          <span class="all">和公众号独立鱼电影昨天的影评有很多相似之处</span>
+          <span class="pubdate"><a href="https://www.douban.com/people/155932664/">四月是你的谎言</a></span>
+        </div>
+
+
+      <p class="comment-text">“我敢说，你又没看懂张艺谋<br><br>罗罔极独立鱼电影前天”<br>“不过，鱼叔的基友罗罔极有不同看法，他恰恰觉得《影》 的故事没那么简单。<br><br>这就让他来说说另一个「影」。”</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u70560661 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10018300" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10018314" data-cid="10018314" data-user_name="kobejackson" data-user_url="https://www.douban.com/people/174072154/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/174072154/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u174072154-1.jpg" alt="kobejackson"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/174072154/">kobejackson</a>
+        <span>2018-10-08 00:23:18</span>
+      </div>
+
+
+
+      <p class="comment-text">我感觉田战不会杀境州 三种结局我来说一下 <br>1 沛王胜 子虞死 境州当都督 显然作为王的手下 田战会掌握实权<br>2 子虞胜 沛王死 境州死 按照约定子虞封田战为都督<br>3 沛王死 子虞死 境州胜 田战武力超群还是会被封为都督 <br>所以 无论谁输谁赢 田战都会是未来的都督 而且如果田战杀境州 那么境州从此没有王 没有都督 田战一介武夫绝非当王的材料 那么沛国必定会大乱 综上所述 作为必定的赢家 田战会对境州俯首称臣然后被封为都督</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u174072154 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10018314" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10018320" data-cid="10018320" data-user_name="yuki" data-user_url="https://www.douban.com/people/166471909/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/166471909/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u166471909-1.jpg" alt="yuki"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/166471909/">yuki</a>
+        <span>2018-10-08 00:24:32</span>
+      </div>
+
+
+
+      <p class="comment-text">说得好，总是有些人装逼要拼命鸡蛋里挑骨头显示自己的与众不同</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u166471909 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10018320" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10018326" data-cid="10018326" data-user_name="酸奶小坚果" data-user_url="https://www.douban.com/people/146527650/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/146527650/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u146527650-4.jpg" alt="酸奶小坚果"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/146527650/">酸奶小坚果</a>
+        <span>2018-10-08 00:27:03</span>
+      </div>
+
+
+
+      <p class="comment-text">很棒！</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u146527650 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10018326" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10018435" data-cid="10018435" data-user_name="大川" data-user_url="https://www.douban.com/people/167362426/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/167362426/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u167362426-2.jpg" alt="大川"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/167362426/">大川</a>
+        <span>2018-10-08 00:58:00</span>
+      </div>
+
+
+
+      <p class="comment-text">境州对小艾的感情我非常能理解。有一幕境州向小艾寻找安慰，他的脸贴进小艾的胸前。我觉得他在渴望象征母爱的乳房。</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u167362426 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10018435" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10018455" data-cid="10018455" data-user_name="sanfeng" data-user_url="https://www.douban.com/people/185594007/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/185594007/"><img width="48" height="48" src="https://img1.doubanio.com/icon/user_normal.jpg" alt="sanfeng"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/185594007/">sanfeng</a>
+        <span>2018-10-08 01:08:23</span>
+      </div>
+
+
+
+      <p class="comment-text">处女账号，就为评论一次。如同看过这部影片，对自己是一种提升，阅读此评论也是如此。恨无打赏功能</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u185594007 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10018455" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10018625" data-cid="10018625" data-user_name="挪威耀阳" data-user_url="https://www.douban.com/people/103296640/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/103296640/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u103296640-1.jpg" alt="挪威耀阳"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/103296640/">挪威耀阳</a>  (有冇某種謎語，謎面就系謎底？)
+        <span>2018-10-08 02:09:25</span>
+      </div>
+
+
+
+      <p class="comment-text">可以</p>
+
+      <div class="op-lnks">
+
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u103296640 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10018625" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10019426" data-cid="10019426" data-user_name="彩虹" data-user_url="https://www.douban.com/people/178985390/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/178985390/"><img width="48" height="48" src="https://img3.doubanio.com/icon/user_normal_f.jpg" alt="彩虹"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/178985390/">彩虹</a>
+        <span>2018-10-08 08:41:40</span>
+      </div>
+
+
+
+      <p class="comment-text">影评很好</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u178985390 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10019426" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10019636" data-cid="10019636" data-user_name="海海玛蒂" data-user_url="https://www.douban.com/people/157283138/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/157283138/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u157283138-5.jpg" alt="海海玛蒂"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/157283138/">海海玛蒂</a>
+        <span>2018-10-08 09:39:51</span>
+      </div>
+
+
+
+      <p class="comment-text">看见这样好的影评，真的会觉得自己应该多读一些书。 。 前面对观众的刻画就是我了…说不出啥，但是意犹未尽…</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u157283138 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10019636" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10019722" data-cid="10019722" data-user_name="RedMoon" data-user_url="https://www.douban.com/people/185072755/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/185072755/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u185072755-6.jpg" alt="RedMoon"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/185072755/">RedMoon</a>
+        <span>2018-10-08 10:16:20</span>
+      </div>
+
+
+
+      <p class="comment-text">影评很好！让我顿悟了真正的主角的确只有《影》，这是影与影的较量（替身之间的较量）<br>——游走于真假之间的人才有生的选择~ <br>你若真很可能成为远离真相的牺牲品，你若假很可能弄假成真自食其果，你若假假真真可能有一线选择生的机会。一场游戏一场梦。这场人生游戏里，你是谁的替身？谁又是你的替身？亦或者，你是原来是远离真相的人。</p>
+
+      <div class="op-lnks">
+
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u185072755 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10019722" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10020002" data-cid="10020002" data-user_name="水清莲心" data-user_url="https://www.douban.com/people/xylily/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/xylily/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u3453263-1.jpg" alt="水清莲心"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/xylily/">水清莲心</a>  (水清映明月，莲心共天心)
+        <span>2018-10-08 11:45:16</span>
+      </div>
+
+
+
+      <p class="comment-text">哇哈哈哈</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u3453263 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10020002" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10020067" data-cid="10020067" data-user_name="浅安·无月" data-user_url="https://www.douban.com/people/42584011/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="10018314">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/42584011/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u42584011-12.jpg" alt="浅安·无月"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/42584011/">浅安·无月</a>
+        <span>2018-10-08 12:03:07</span>
+      </div>
+
+
+
+        <div class="reply-quote">
+          <span class="short">我感觉田战不会杀境州 三种结局我来说一下
+1 沛王胜 子虞死 境州当都督 显然作为王的手下 田...</span>
+          <span class="all">我感觉田战不会杀境州 三种结局我来说一下
+1 沛王胜 子虞死 境州当都督 显然作为王的手下 田战会掌握实权
+2 子虞胜 沛王死 境州死 按照约定子虞封田战为都督
+3 沛王死 子虞死 境州胜 田战武力超群还是会被封为都督
+所以 无论谁输谁赢 田战都会是未来的都督 而且如果田战杀境州 那么境州从此没有王 没有都督 田战一介武夫绝非当王的材料 那么沛国必定会大乱 综上所述 作为必定的赢家 田战会对境州俯首称臣然后被封为都督</span>
+          <a href="javascript:;" class="toggle_reply">...</a>
+          <span class="pubdate"><a href="https://www.douban.com/people/174072154/">kobejackson</a></span>
+        </div>
+
+
+      <p class="comment-text">但是沛王、子虞都死了。只有境州胜（活着），田战知道境州身份的。而田战之前并没有显示是忠于境州的（境州也说过我就是个影子，你忠于的不是我这样的话）。而境州杀死沛王、子虞出门第一句话是刺客来袭，把王杀了，我把刺客杀了。说明这时候境州想保命，所以无论田战忠于的是谁（沛王或者子虞），他都知道自己的主子死了。<br><br>那么他们会互杀么？那时候，站在田战背后还有很多朝臣（仅仅只朝臣站的位置哈），对他们而言，只知道王被刺客杀了，都督杀了刺客。虽然田战知道真相，但这时候如果把境州杀了，完全没理由，甚至会被认为是刺客同党。境州杀田战，可以说田战是刺客同党，但是田战作为重臣没证据无法让人信服。这里还涉及谁武功高的情况。所以很有可能是暂时合作</p>
+
+      <div class="op-lnks">
+
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u42584011 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10020067" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10020121" data-cid="10020121" data-user_name="coeur" data-user_url="https://www.douban.com/people/179824209/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/179824209/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u179824209-1.jpg" alt="coeur"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/179824209/">coeur</a>
+        <span>2018-10-08 12:20:51</span>
+      </div>
+
+
+
+      <p class="comment-text">可是那一个人并不能代表国人整体的欣赏水平</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u179824209 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10020121" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10020137" data-cid="10020137" data-user_name="韦尼克与白洛嘉" data-user_url="https://www.douban.com/people/176394498/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/176394498/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u176394498-5.jpg" alt="韦尼克与白洛嘉"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/176394498/">韦尼克与白洛嘉</a>
+        <span>2018-10-08 12:24:11</span>
+      </div>
+
+
+
+      <p class="comment-text">但按照新发布的彩蛋来看，主公和都督合谋攻城，田战偏向都督，立场待定。<br>嚯嚯，是不是感觉新彩蛋把好不容易整理的思路全部打乱了。</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u176394498 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10020137" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10020279" data-cid="10020279" data-user_name="pkbia" data-user_url="https://www.douban.com/people/135840792/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/135840792/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u135840792-3.jpg" alt="pkbia"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/135840792/">pkbia</a>
+        <span>2018-10-08 13:10:05</span>
+      </div>
+
+
+
+      <p class="comment-text">分析很透彻，学习了！</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u135840792 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10020279" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10020296" data-cid="10020296" data-user_name="喵大喵" data-user_url="https://www.douban.com/people/76601436/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/76601436/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u76601436-3.jpg" alt="喵大喵"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/76601436/">喵大喵</a>
+        <span>2018-10-08 13:15:59</span>
+      </div>
+
+
+
+      <p class="comment-text">有人味的阳春白雪和有仙味的下里巴人都是好东西，可遇而不可求，何苦相互贬低。电影不论是艺术还是娱乐，都是人的精神食粮，我爱快餐也爱珍馐，评判它们的标准是好不好吃，能不能给我享受，再无其它。</p>
+
+      <div class="op-lnks">
+
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u76601436 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10020296" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10020581" data-cid="10020581" data-user_name="Amaranth" data-user_url="https://www.douban.com/people/132404436/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/132404436/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u132404436-3.jpg" alt="Amaranth"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/132404436/">Amaranth</a>
+        <span>2018-10-08 15:07:46</span>
+      </div>
+
+
+
+      <p class="comment-text">我觉得设计是不错的。 但是几处剧情太生拉硬扯了！  扬苍好好的刀不用 天下无敌的人 被反杀的方式太牵强，同样 杨平的死也牵强。 然后就是最后的阶段，为啥只剩DUDU一个人了  就只派3个人去？ 多派几个会咋样？ 这是王最关键的一部了 居然这么掉以轻心。 本来很紧张的剧情 看的人想笑。</p>
+
+      <div class="op-lnks">
+
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u132404436 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10020581" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10020607" data-cid="10020607" data-user_name="马化肥" data-user_url="https://www.douban.com/people/185474146/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/185474146/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u185474146-1.jpg" alt="马化肥"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/185474146/">马化肥</a>
+        <span>2018-10-08 15:16:12</span>
+      </div>
+
+
+
+      <p class="comment-text">说田战是主公安插在都督内部的人。全部是推测，电影却没有给出直接证据。而且早不安插，却在都督被贬为草民后。<br>你是上帝视角，主公也是上帝视角咯</p>
+
+      <div class="op-lnks">
+
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u185474146 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10020607" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10020613" data-cid="10020613" data-user_name="тí.Colate." data-user_url="https://www.douban.com/people/24964422/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/24964422/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u24964422-2.jpg" alt="тí.Colate."></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/24964422/">тí.Colate.</a>
+        <span>2018-10-08 15:18:38</span>
+      </div>
+
+
+
+      <p class="comment-text">影评很赞，但是因为演员演技……（对不起邓超总能让我笑场...) 所以....再强有力的氛围感染的影评还是不能改变我对电影的评分就是了……</p>
+
+      <div class="op-lnks">
+
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u24964422 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10020613" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10020661" data-cid="10020661" data-user_name="lhnn" data-user_url="https://www.douban.com/people/177233377/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/177233377/"><img width="48" height="48" src="https://img1.doubanio.com/icon/user_normal.jpg" alt="lhnn"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/177233377/">lhnn</a>
+        <span>2018-10-08 15:33:36</span>
+      </div>
+
+
+
+      <p class="comment-text">这是老谋子电影故事比较完整的一部</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u177233377 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10020661" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10020667" data-cid="10020667" data-user_name="lhnn" data-user_url="https://www.douban.com/people/177233377/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/177233377/"><img width="48" height="48" src="https://img1.doubanio.com/icon/user_normal.jpg" alt="lhnn"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/177233377/">lhnn</a>
+        <span>2018-10-08 15:35:42</span>
+      </div>
+
+
+
+      <p class="comment-text">不同于看电视剧啰啰嗦嗦，看电影本来就是七分靠想象</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u177233377 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10020667" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10020692" data-cid="10020692" data-user_name="Zoro" data-user_url="https://www.douban.com/people/media2013/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/media2013/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u60584505-10.jpg" alt="Zoro"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/media2013/">Zoro</a>  (缘来是Lee)
+        <span>2018-10-08 15:45:44</span>
+      </div>
+
+
+
+      <p class="comment-text">这种解读很到位啊。不过话说回来，留白本就是为了开放解读。我倒觉得最后惊恐的小艾像极了《英雄》最后的无名。无名没刺秦，小艾定不会让镜州挂了。<br>镜州和田战相比之下，谁更适合这个一国之君呢？一个活在阴阳诡道之间，一个总以性命相搏。</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u60584505 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10020692" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10020715" data-cid="10020715" data-user_name="ZZZ" data-user_url="https://www.douban.com/people/185613454/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/185613454/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u185613454-2.jpg" alt="ZZZ"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/185613454/">ZZZ</a>
+        <span>2018-10-08 15:55:05</span>
+      </div>
+
+
+
+      <p class="comment-text">无言的结局，拿个美工奖可以，剧情就算了，结局真的很烂，<br>有几件事情没结果的：<br>1. 田战这王之间谍怎么办，即使境州出门后大臣们都无异议，他与境州之间也只能留一人，互相都知道各自的身份，不可能开开心心从此相亲相爱过一辈子的。<br>（除非攻城时补一个境州救了田战的镜头）<br>2.小艾这遗孀怎么办，知道一切，只是跟境州啪了一次，但是境州也当面杀了她的丈夫，而且当着她面布置凶案现场，各种摆尸体，试问两个人要怎么样过这一生。<br>（除非前面补一些子虞为了复仇甘愿不要小艾的镜头，意思说小艾的心早已死了）</p>
+
+      <div class="op-lnks">
+
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u185613454 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10020715" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10020717" data-cid="10020717" data-user_name="森屿旅人" data-user_url="https://www.douban.com/people/159634055/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/159634055/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u159634055-1.jpg" alt="森屿旅人"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/159634055/">森屿旅人</a>
+        <span>2018-10-08 15:55:35</span>
+      </div>
+
+
+
+      <p class="comment-text">作者这种可能性很大，我预想的是王有些历史上楚庄王的感觉，不鸣则已 一鸣惊人的范与城府，子瑜就像韩信一样功高震主，王一边装疯卖傻一边暗中布置人手调查子瑜，就像镜州要被杀时突然出现的神秘人，还有子瑜父亲朝堂被杀死证明朝堂上还有一股子瑜也不清楚掌握的神秘力量。而田将军我预想里他就是一个单纯的武将而已，要是主公的人公主死在他面前他给我的感觉更多的是冷漠。我觉得他不忠君只忠子瑜。小艾看到的我觉得是田将军应该知道子瑜的计划，而镜州却出来说王被刺客杀了，愤而去杀荆州。小艾的抉择是内心的选择与告不告诉大臣影子真假无关，她拼命奔向门口是因为她想起田将军知道镜州的身份，那一刻她已经作出了选择。个人看法，但小编的更合理一些</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u159634055 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10020717" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10020760" data-cid="10020760" data-user_name="与山居88" data-user_url="https://www.douban.com/people/185615118/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="10018314">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/185615118/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u185615118-1.jpg" alt="与山居88"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/185615118/">与山居88</a>
+        <span>2018-10-08 16:12:16</span>
+      </div>
+
+
+
+        <div class="reply-quote">
+          <span class="short">我感觉田战不会杀境州 三种结局我来说一下
+1 沛王胜 子虞死 境州当都督 显然作为王的手下 田...</span>
+          <span class="all">我感觉田战不会杀境州 三种结局我来说一下
+1 沛王胜 子虞死 境州当都督 显然作为王的手下 田战会掌握实权
+2 子虞胜 沛王死 境州死 按照约定子虞封田战为都督
+3 沛王死 子虞死 境州胜 田战武力超群还是会被封为都督
+所以 无论谁输谁赢 田战都会是未来的都督 而且如果田战杀境州 那么境州从此没有王 没有都督 田战一介武夫绝非当王的材料 那么沛国必定会大乱 综上所述 作为必定的赢家 田战会对境州俯首称臣然后被封为都督</span>
+          <a href="javascript:;" class="toggle_reply">...</a>
+          <span class="pubdate"><a href="https://www.douban.com/people/174072154/">kobejackson</a></span>
+        </div>
+
+
+      <p class="comment-text">即便当时镜州不杀田战，但是当镜州当上王之后，也一定会杀了田战。所以，当镜州走出去之后田战一定会杀了镜州。镜州和田战只能活一人。</p>
+
+      <div class="op-lnks">
+
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u185615118 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10020760" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10020761" data-cid="10020761" data-user_name="lhnn" data-user_url="https://www.douban.com/people/177233377/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/177233377/"><img width="48" height="48" src="https://img1.doubanio.com/icon/user_normal.jpg" alt="lhnn"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/177233377/">lhnn</a>
+        <span>2018-10-08 16:12:26</span>
+      </div>
+
+
+
+      <p class="comment-text">低级趣味与审美肤浅让人担忧，一直喜欢张艺谋。</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u177233377 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10020761" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10020808" data-cid="10020808" data-user_name="小丰丰没记性-" data-user_url="https://www.douban.com/people/147954133/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/147954133/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u147954133-4.jpg" alt="小丰丰没记性-"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/147954133/">小丰丰没记性-</a>
+        <span>2018-10-08 16:30:05</span>
+      </div>
+
+
+
+      <p class="comment-text">写的太棒啦</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u147954133 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10020808" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10020872" data-cid="10020872" data-user_name="茶博士" data-user_url="https://www.douban.com/people/27518977/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/27518977/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u27518977-4.jpg" alt="茶博士"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/27518977/">茶博士</a>
+        <span>2018-10-08 16:47:24</span>
+      </div>
+
+
+
+      <p class="comment-text">解得透。</p>
+
+      <div class="op-lnks">
+
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u27518977 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10020872" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10020909" data-cid="10020909" data-user_name="Sunset Blvd " data-user_url="https://www.douban.com/people/geosss/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/geosss/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u82172283-26.jpg" alt="Sunset Blvd "></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/geosss/">Sunset Blvd </a>  (Back in Beijing)
+        <span>2018-10-08 16:58:38</span>
+      </div>
+
+
+
+      <p class="comment-text">楼主的影评有理有据。我补充一点，田战要有理有据的杀死镜州，必须得到小艾的支持。我想下一幕，小艾的决定就是摘下都督的面具，揭穿镜州的替身身份。毕竟作为知道真相的人，她不安全。</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u82172283 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10020909" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10020984" data-cid="10020984" data-user_name="面壁者" data-user_url="https://www.douban.com/people/sunjin720723/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/sunjin720723/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u184174271-1.jpg" alt="面壁者"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/sunjin720723/">面壁者</a>
+        <span>2018-10-08 17:16:28</span>
+      </div>
+
+
+
+      <p class="comment-text">我不同意结局田战会杀境州，一是田一个人证明不了境州的身份，况且人家是刚刚浴血归来的大英雄；二是，如果田是忠臣，那他一定也是忠于这个委曲求全的小国 和她的臣民的（如此点不通，田只忠于主公或都督家族的话则另论），如果田杀境州，则此国必乱，邻国报复必亡。田要杀境也不会在这个时候杀！所以，最大的可能还是应该带群臣下跪。忘了是谁的影评中说的，小艾此时在孔中所窥，就像当时子虞在孔中所窥小艾与境州苟且一样：子虞看到的是男女之间的偷情苟且，小艾看到的是男人为权力或实现自己目的的无耻苟且！所以她面临艰难选择是要不要揭穿他们？？而卦像中早就说了：此卦至刚至阳，没有女人的位置，所以最后的境头，小艾从瞪大眼睛到慢慢平静就是说她自己也明白了，自己一个女人是无法改变这一切的了，心死……</p>
+
+      <div class="op-lnks">
+
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u184174271 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10020984" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10021177" data-cid="10021177" data-user_name="Jade" data-user_url="https://www.douban.com/people/77753623/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/77753623/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u77753623-2.jpg" alt="Jade"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/77753623/">Jade</a>
+        <span>2018-10-08 18:33:27</span>
+      </div>
+
+
+
+      <p class="comment-text">佩服，关注你了～</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u77753623 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10021177" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10021253" data-cid="10021253" data-user_name="霎予需" data-user_url="https://www.douban.com/people/167647691/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/167647691/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u167647691-1.jpg" alt="霎予需"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/167647691/">霎予需</a>
+        <span>2018-10-08 19:07:07</span>
+      </div>
+
+
+
+      <p class="comment-text">如果小艾看到的是镜州被杀，那会表现出强烈的恐惧和惊吓状态，但是看起来那种表情与神态是无奈的。她之所以会在全身无力的状态下跑到门口，就是担心镜州被杀，但是到门口看到的是已经无法改变的现实。</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u167647691 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10021253" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10021365" data-cid="10021365" data-user_name="色拉" data-user_url="https://www.douban.com/people/3397683/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/3397683/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u3397683-3.jpg" alt="色拉"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/3397683/">色拉</a>  (^..^)
+        <span>2018-10-08 19:57:00</span>
+      </div>
+
+
+
+      <p class="comment-text">最后小艾看到真大王现身的概率有多少？？</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u3397683 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10021365" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10021417" data-cid="10021417" data-user_name="[已注销]" data-user_url="https://www.douban.com/people/185623727/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/185623727/"><img width="48" height="48" src="https://img1.doubanio.com/icon/user_normal.jpg" alt="[已注销]"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/185623727/">[已注销]</a>
+        <span>2018-10-08 20:20:11</span>
+      </div>
+
+
+
+      <p class="comment-text">评的很不错！可惜有一个天大的错误，那就是小艾才是沛良的影子！！！！！！证据就是： 沛良验刀伤。小艾看到子虞给镜州做旧刀伤。真实场景就是，小艾早就告知沛良，子虞用了影子。做旧刀伤自然也告知了，才有了沛良在朝堂之上验镜州的伤。验伤是为了看看小艾的可靠与否，以及确定镜州的身份后，好决定计划（请仔细想想，如果沛良的影子是田战，那为何沛良会在田战还没接触到子虞的时候，就怀疑镜州的身份了呢）！田战的确很像沛良的影子，但这真的是个烟雾！小艾最后跑去开门，其实是准备拆穿镜州的阴谋，但最终显示她犹豫了。所以结局定了，影子成功上位，不存在导演故弄玄虚，故意让你们去猜结局。田战和镜州不存在你们想象的互杀，田战只能服从，顺水推舟！所以这是个励志的故事！</p>
+
+      <div class="op-lnks">
+
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u185623727 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10021417" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10021420" data-cid="10021420" data-user_name="[已注销]" data-user_url="https://www.douban.com/people/185623727/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="10021253">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/185623727/"><img width="48" height="48" src="https://img1.doubanio.com/icon/user_normal.jpg" alt="[已注销]"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/185623727/">[已注销]</a>
+        <span>2018-10-08 20:20:51</span>
+      </div>
+
+
+
+        <div class="reply-quote">
+          <span class="short">如果小艾看到的是镜州被杀，那会表现出强烈的恐惧和惊吓状态，但是看起来那种表情与神态是无...</span>
+          <span class="all">如果小艾看到的是镜州被杀，那会表现出强烈的恐惧和惊吓状态，但是看起来那种表情与神态是无奈的。她之所以会在全身无力的状态下跑到门口，就是担心镜州被杀，但是到门口看到的是已经无法改变的现实。</span>
+          <a href="javascript:;" class="toggle_reply">...</a>
+          <span class="pubdate"><a href="https://www.douban.com/people/167647691/">霎予需</a></span>
+        </div>
+
+
+      <p class="comment-text">小艾才是沛良的影子！！！！！！证据就是： 沛良验刀伤。小艾看到子虞给镜州做旧刀伤。真实场景就是，小艾早就告知沛良，子虞用了影子。做旧刀伤自然也告知了，才有了沛良在朝堂之上验镜州的伤。验伤是为了看看小艾的可靠与否，以及确定镜州的身份后，好决定计划（请仔细想想，如果沛良的影子是田战，那为何沛良会在田战还没接触到子虞的时候，就怀疑镜州的身份了呢）！田战的确很像沛良的影子，但这真的是个烟雾！小艾最后跑去开门，其实是准备拆穿镜州的阴谋，但最终显示她犹豫了。所以结局定了，影子成功上位，不存在导演故弄玄虚，故意让你们去猜结局。田战和镜州不存在你们想象的互杀，田战只能服从，顺水推舟！所以这是个励志的故事！</p>
+
+      <div class="op-lnks">
+
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u185623727 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10021420" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10021427" data-cid="10021427" data-user_name="[已注销]" data-user_url="https://www.douban.com/people/185623727/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="10020984">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/185623727/"><img width="48" height="48" src="https://img1.doubanio.com/icon/user_normal.jpg" alt="[已注销]"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/185623727/">[已注销]</a>
+        <span>2018-10-08 20:23:24</span>
+      </div>
+
+
+
+        <div class="reply-quote">
+          <span class="short">我不同意结局田战会杀境州，一是田一个人证明不了境州的身份，况且人家是刚刚浴血归来的大英...</span>
+          <span class="all">我不同意结局田战会杀境州，一是田一个人证明不了境州的身份，况且人家是刚刚浴血归来的大英雄；二是，如果田是忠臣，那他一定也是忠于这个委曲求全的小国 和她的臣民的（如此点不通，田只忠于主公或都督家族的话则另论），如果田杀境州，则此国必乱，邻国报复必亡。田要杀境也不会在这个时候杀！所以，最大的可能还是应该带群臣下跪。忘了是谁的影评中说的，小艾此时在孔中所窥，就像当时子虞在孔中所窥小艾与境州苟且一样：子虞看到的是男女之间的偷情苟且，小艾看到的是男人为权力或实现自己目的的无耻苟且！所以她面临艰难选择是要不要揭穿他们？？而卦像中早就说了：此卦至刚至阳，没有女人的位置，所以最后的境头，小艾从瞪大眼睛到慢慢平静就是说她自己也明白了，自己一个女人是无法改变这一切的了，心死……</span>
+          <a href="javascript:;" class="toggle_reply">...</a>
+          <span class="pubdate"><a href="https://www.douban.com/people/sunjin720723/">面壁者</a></span>
+        </div>
+
+
+      <p class="comment-text">别分析了，楼主挖了个坑，你们就跳啊！小艾才是沛良的影子！！！！！！证据就是： 沛良验刀伤。小艾看到子虞给镜州做旧刀伤。真实场景就是，小艾早就告知沛良，子虞用了影子。做旧刀伤自然也告知了，才有了沛良在朝堂之上验镜州的伤。验伤是为了看看小艾的可靠与否，以及确定镜州的身份后，好决定计划（请仔细想想，如果沛良的影子是田战，那为何沛良会在田战还没接触到子虞的时候，就怀疑镜州的身份了呢）！田战的确很像沛良的影子，但这真的是个烟雾！小艾最后跑去开门，其实是准备拆穿镜州的阴谋，但最终显示她犹豫了。所以结局定了，影子成功上位，不存在导演故弄玄虚，故意让你们去猜结局。田战和镜州不存在你们想象的互杀，田战只能服从，顺水推舟！所以这是个励志的故事！</p>
+
+      <div class="op-lnks">
+
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u185623727 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10021427" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10021432" data-cid="10021432" data-user_name="[已注销]" data-user_url="https://www.douban.com/people/185623727/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="10013667">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/185623727/"><img width="48" height="48" src="https://img1.doubanio.com/icon/user_normal.jpg" alt="[已注销]"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/185623727/">[已注销]</a>
+        <span>2018-10-08 20:26:07</span>
+      </div>
+
+
+
+        <div class="reply-quote">
+          <span class="short">写的很好👍看到田战问子虞想不想取而代之时我就在想田战可能是沛良的人，后来看到沛良派出...</span>
+          <span class="all">写的很好👍看到田战问子虞想不想取而代之时我就在想田战可能是沛良的人，后来看到沛良派出的刺客轻而易举地找到密室里的子虞时更加确认这一点</span>
+          <a href="javascript:;" class="toggle_reply">...</a>
+          <span class="pubdate"><a href="https://www.douban.com/people/52987027/">白雪谣</a></span>
+        </div>
+
+
+      <p class="comment-text">人家挖个坑，你就往里跳！小艾才是沛良的影子！！！！！！证据就是： 沛良验刀伤。小艾看到子虞给镜州做旧刀伤。真实场景就是，小艾早就告知沛良，子虞用了影子。做旧刀伤自然也告知了，才有了沛良在朝堂之上验镜州的伤。验伤是为了看看小艾的可靠与否，以及确定镜州的身份后，好决定计划（请仔细想想，如果沛良的影子是田战，那为何沛良会在田战还没接触到子虞的时候，就怀疑镜州的身份了呢）！田战的确很像沛良的影子，但这真的是个烟雾！小艾最后跑去开门，其实是准备拆穿镜州的阴谋，但最终显示她犹豫了。所以结局定了，影子成功上位，不存在导演故弄玄虚，故意让你们去猜结局。田战和镜州不存在你们想象的互杀，田战只能服从，顺水推舟！所以这是个励志的故事！</p>
+
+      <div class="op-lnks">
+
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u185623727 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10021432" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10021437" data-cid="10021437" data-user_name="[已注销]" data-user_url="https://www.douban.com/people/185623727/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="10020715">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/185623727/"><img width="48" height="48" src="https://img1.doubanio.com/icon/user_normal.jpg" alt="[已注销]"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/185623727/">[已注销]</a>
+        <span>2018-10-08 20:28:19</span>
+      </div>
+
+
+
+        <div class="reply-quote">
+          <span class="short">无言的结局，拿个美工奖可以，剧情就算了，结局真的很烂，
+有几件事情没结果的：
+1. 田战这王...</span>
+          <span class="all">无言的结局，拿个美工奖可以，剧情就算了，结局真的很烂，
+有几件事情没结果的：
+1. 田战这王之间谍怎么办，即使境州出门后大臣们都无异议，他与境州之间也只能留一人，互相都知道各自的身份，不可能开开心心从此相亲相爱过一辈子的。
+（除非攻城时补一个境州救了田战的镜头）
+2.小艾这遗孀怎么办，知道一切，只是跟境州啪了一次，但是境州也当面杀了她的丈夫，而且当着她面布置凶案现场，各种摆尸体，试问两个人要怎么样过这一生。
+（除非前面补一些子虞为了复仇甘愿不要小艾的镜头，意思说小艾的心早已死了）</span>
+          <a href="javascript:;" class="toggle_reply">...</a>
+          <span class="pubdate"><a href="https://www.douban.com/people/185613454/">ZZZ</a></span>
+        </div>
+
+
+      <p class="comment-text">小艾才是沛良的影子！！！！！！证据就是： 沛良验刀伤。小艾看到子虞给镜州做旧刀伤。真实场景就是，小艾早就告知沛良，子虞用了影子。做旧刀伤自然也告知了，才有了沛良在朝堂之上验镜州的伤。验伤是为了看看小艾的可靠与否，以及确定镜州的身份后，好决定计划（请仔细想想，如果沛良的影子是田战，那为何沛良会在田战还没接触到子虞的时候，就怀疑镜州的身份了呢）！田战的确很像沛良的影子，但这真的是个烟雾！小艾最后跑去开门，其实是准备拆穿镜州的阴谋，但最终显示她犹豫了。所以结局定了，影子成功上位，不存在导演故弄玄虚，故意让你们去猜结局。田战和镜州不存在你们想象的互杀，田战只能服从，顺水推舟！所以这是个励志的故事！</p>
+
+      <div class="op-lnks">
+
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u185623727 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10021437" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10021440" data-cid="10021440" data-user_name="[已注销]" data-user_url="https://www.douban.com/people/185623727/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="10020715">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/185623727/"><img width="48" height="48" src="https://img1.doubanio.com/icon/user_normal.jpg" alt="[已注销]"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/185623727/">[已注销]</a>
+        <span>2018-10-08 20:29:56</span>
+      </div>
+
+
+
+        <div class="reply-quote">
+          <span class="short">无言的结局，拿个美工奖可以，剧情就算了，结局真的很烂，
+有几件事情没结果的：
+1. 田战这王...</span>
+          <span class="all">无言的结局，拿个美工奖可以，剧情就算了，结局真的很烂，
+有几件事情没结果的：
+1. 田战这王之间谍怎么办，即使境州出门后大臣们都无异议，他与境州之间也只能留一人，互相都知道各自的身份，不可能开开心心从此相亲相爱过一辈子的。
+（除非攻城时补一个境州救了田战的镜头）
+2.小艾这遗孀怎么办，知道一切，只是跟境州啪了一次，但是境州也当面杀了她的丈夫，而且当着她面布置凶案现场，各种摆尸体，试问两个人要怎么样过这一生。
+（除非前面补一些子虞为了复仇甘愿不要小艾的镜头，意思说小艾的心早已死了）</span>
+          <a href="javascript:;" class="toggle_reply">...</a>
+          <span class="pubdate"><a href="https://www.douban.com/people/185613454/">ZZZ</a></span>
+        </div>
+
+
+      <p class="comment-text">自作聪明啦！小艾才是沛良的影子！！！！！！证据就是： 沛良验刀伤。小艾看到子虞给镜州做旧刀伤。真实场景就是，小艾早就告知沛良，子虞用了影子。做旧刀伤自然也告知了，才有了沛良在朝堂之上验镜州的伤。验伤是为了看看小艾的可靠与否，以及确定镜州的身份后，好决定计划（请仔细想想，如果沛良的影子是田战，那为何沛良会在田战还没接触到子虞的时候，就怀疑镜州的身份了呢）！田战的确很像沛良的影子，但这真的是个烟雾！小艾最后跑去开门，其实是准备拆穿镜州的阴谋，但最终显示她犹豫了。所以结局定了，影子成功上位，不存在导演故弄玄虚，故意让你们去猜结局。田战和镜州不存在你们想象的互杀，田战只能服从，顺水推舟！所以这是个励志的故事！</p>
+
+      <div class="op-lnks">
+
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u185623727 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10021440" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10021445" data-cid="10021445" data-user_name="[已注销]" data-user_url="https://www.douban.com/people/185623727/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="10020607">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/185623727/"><img width="48" height="48" src="https://img1.doubanio.com/icon/user_normal.jpg" alt="[已注销]"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/185623727/">[已注销]</a>
+        <span>2018-10-08 20:31:23</span>
+      </div>
+
+
+
+        <div class="reply-quote">
+          <span class="short">说田战是主公安插在都督内部的人。全部是推测，电影却没有给出直接证据。而且早不安插，却在...</span>
+          <span class="all">说田战是主公安插在都督内部的人。全部是推测，电影却没有给出直接证据。而且早不安插，却在都督被贬为草民后。
+你是上帝视角，主公也是上帝视角咯</span>
+          <a href="javascript:;" class="toggle_reply">...</a>
+          <span class="pubdate"><a href="https://www.douban.com/people/185474146/">马化肥</a></span>
+        </div>
+
+
+      <p class="comment-text">聪明人不多，但你是一个！小艾才是沛良的影子！！！！！！证据就是： 沛良验刀伤。小艾看到子虞给镜州做旧刀伤。真实场景就是，小艾早就告知沛良，子虞用了影子。做旧刀伤自然也告知了，才有了沛良在朝堂之上验镜州的伤。验伤是为了看看小艾的可靠与否，以及确定镜州的身份后，好决定计划（请仔细想想，如果沛良的影子是田战，那为何沛良会在田战还没接触到子虞的时候，就怀疑镜州的身份了呢）！田战的确很像沛良的影子，但这真的是个烟雾！小艾最后跑去开门，其实是准备拆穿镜州的阴谋，但最终显示她犹豫了。所以结局定了，影子成功上位，不存在导演故弄玄虚，故意让你们去猜结局。田战和镜州不存在你们想象的互杀，田战只能服从，顺水推舟！所以这是个励志的故事！</p>
+
+      <div class="op-lnks">
+
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u185623727 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10021445" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10021561" data-cid="10021561" data-user_name="妖哥哥呦" data-user_url="https://www.douban.com/people/182022017/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/182022017/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u182022017-1.jpg" alt="妖哥哥呦"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/182022017/">妖哥哥呦</a>
+        <span>2018-10-08 21:07:18</span>
+      </div>
+
+
+
+      <p class="comment-text">感触频多就是对关晓彤的演技不咋看好</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u182022017 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10021561" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10021638" data-cid="10021638" data-user_name="王岩" data-user_url="https://www.douban.com/people/160938837/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/160938837/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u160938837-1.jpg" alt="王岩"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/160938837/">王岩</a>
+        <span>2018-10-08 21:23:49</span>
+      </div>
+
+
+
+      <p class="comment-text">老大 收下我的膝盖 那些所谓的大v都没看懂就乱说一气 作为普通人的我真替他们感到尴尬😓</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u160938837 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10021638" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10021644" data-cid="10021644" data-user_name="鹿女王" data-user_url="https://www.douban.com/people/lunvwang/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/lunvwang/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u83648334-4.jpg" alt="鹿女王"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/lunvwang/">鹿女王</a>  (微信公号：鹿女王教室)
+        <span>2018-10-08 21:25:42</span>
+      </div>
+
+
+
+      <p class="comment-text">《影》这种电影还有人说没看懂？楼主分析了半天也没有分析镜头语言如何，只是在讲剧情罢了....张艺谋的好作品比《影》好的有很多，《影》至多算是中游，没有差错但也未见多出色。这么个平庸的作品还要给观众扣上不懂欣赏艺术的帽子....</p>
+
+      <div class="op-lnks">
+
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u83648334 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10021644" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10021648" data-cid="10021648" data-user_name="太阳可以吃吗" data-user_url="https://www.douban.com/people/98546864/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="10015060">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/98546864/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u98546864-3.jpg" alt="太阳可以吃吗"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/98546864/">太阳可以吃吗</a>
+        <span>2018-10-08 21:26:25</span>
+      </div>
+
+
+
+        <div class="reply-quote">
+          <span class="short">影子就是影子，是没法服众的，除非是遇上小艾这样水性杨花的女人。
+话说电影中，对青萍与境州...</span>
+          <span class="all">影子就是影子，是没法服众的，除非是遇上小艾这样水性杨花的女人。
+话说电影中，对青萍与境州（子瑜），小艾与境州的感情交代得不够，或者根本没交代。
+另，关晓彤是片中最大的败笔，尤其是高音破声，适合演叛逆期少女。</span>
+          <a href="javascript:;" class="toggle_reply">...</a>
+          <span class="pubdate"><a href="https://www.douban.com/people/170512417/">习斋布衣</a></span>
+        </div>
+
+
+      <p class="comment-text">青萍与境州有感情？？！！你在说什么啊</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u98546864 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10021648" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10021652" data-cid="10021652" data-user_name="研磨咖啡" data-user_url="https://www.douban.com/people/138992518/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/138992518/"><img width="48" height="48" src="https://img1.doubanio.com/icon/user_normal.jpg" alt="研磨咖啡"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/138992518/">研磨咖啡</a>
+        <span>2018-10-08 21:27:12</span>
+      </div>
+
+
+
+      <p class="comment-text">写得好，所以选择登录一年仅纯看的豆瓣，只为点个赞。</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u138992518 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10021652" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10021717" data-cid="10021717" data-user_name="love-yilin" data-user_url="https://www.douban.com/people/66139946/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/66139946/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u66139946-1.jpg" alt="love-yilin"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/66139946/">love-yilin</a>
+        <span>2018-10-08 21:48:45</span>
+      </div>
+
+
+
+      <p class="comment-text">真的很棒，感谢您详细的分析</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u66139946 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10021717" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10021776" data-cid="10021776" data-user_name="为影而烧" data-user_url="https://www.douban.com/people/157280070/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/157280070/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u157280070-2.jpg" alt="为影而烧"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/157280070/">为影而烧</a>
+        <span>2018-10-08 22:05:52</span>
+      </div>
+
+
+
+      <p class="comment-text">沛良是不可能要杀境州的，他需要境州帮他稳定军心，他认为自己是可以让境州臣服于自己的，只要给他都督之位和小艾。</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u157280070 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10021776" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10021824" data-cid="10021824" data-user_name="霎予需" data-user_url="https://www.douban.com/people/167647691/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="10021420">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/167647691/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u167647691-1.jpg" alt="霎予需"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/167647691/">霎予需</a>
+        <span>2018-10-08 22:22:33</span>
+      </div>
+
+
+
+        <div class="reply-quote">
+          <span class="short">小艾才是沛良的影子！！！！！！证据就是： 沛良验刀伤。小艾看到子虞给镜州做旧刀伤。真实场...</span>
+          <span class="all">小艾才是沛良的影子！！！！！！证据就是： 沛良验刀伤。小艾看到子虞给镜州做旧刀伤。真实场景就是，小艾早就告知沛良，子虞用了影子。做旧刀伤自然也告知了，才有了沛良在朝堂之上验镜州的伤。验伤是为了看看小艾的可靠与否，以及确定镜州的身份后，好决定计划（请仔细想想，如果沛良的影子是田战，那为何沛良会在田战还没接触到子虞的时候，就怀疑镜州的身份了呢）！田战的确很像沛良的影子，但这真的是个烟雾！小艾最后跑去开门，其实是准备拆穿镜州的阴谋，但最终显示她犹豫了。所以结局定了，影子成功上位，不存在导演故弄玄虚，故意让你们去猜结局。田战和镜州不存在你们想象的互杀，田战只能服从，顺水推舟！所以这是个励志的故事！</span>
+          <a href="javascript:;" class="toggle_reply">...</a>
+          <span class="pubdate"><a href="https://www.douban.com/people/185623727/">[已注销]</a></span>
+        </div>
+
+
+      <p class="comment-text">🤔这么复杂吗？</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u167647691 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10021824" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10021845" data-cid="10021845" data-user_name="May槑-" data-user_url="https://www.douban.com/people/176496845/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/176496845/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u176496845-1.jpg" alt="May槑-"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/176496845/">May槑-</a>
+        <span>2018-10-08 22:29:12</span>
+      </div>
+
+
+
+      <p class="comment-text">说的特别好，真应该上去把那些个批评瞎说的挤下去</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u176496845 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10021845" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10021859" data-cid="10021859" data-user_name="May槑-" data-user_url="https://www.douban.com/people/176496845/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/176496845/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u176496845-1.jpg" alt="May槑-"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/176496845/">May槑-</a>
+        <span>2018-10-08 22:33:05</span>
+      </div>
+
+
+
+      <p class="comment-text">说出了我所有想说的话！！佩服</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u176496845 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10021859" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10021915" data-cid="10021915" data-user_name="天际飞翔" data-user_url="https://www.douban.com/people/184881295/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/184881295/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u184881295-1.jpg" alt="天际飞翔"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/184881295/">天际飞翔</a>
+        <span>2018-10-08 22:47:53</span>
+      </div>
+
+
+
+      <p class="comment-text">田战是王的眼线没问题，但是并不是王的替身啊，王和都督都死了，只有田战和小艾能证明镜州的身份，我觉得田战向镜州效忠才会有最大的好处</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u184881295 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10021915" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10022017" data-cid="10022017" data-user_name="帅帅" data-user_url="https://www.douban.com/people/115852261/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/115852261/"><img width="48" height="48" src="https://img1.doubanio.com/icon/user_normal.jpg" alt="帅帅"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/115852261/">帅帅</a>
+        <span>2018-10-08 23:13:20</span>
+      </div>
+
+
+
+      <p class="comment-text">服气，福气，夫妻？？？</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u115852261 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10022017" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10022022" data-cid="10022022" data-user_name="喵呜一口" data-user_url="https://www.douban.com/people/165191344/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/165191344/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u165191344-2.jpg" alt="喵呜一口"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/165191344/">喵呜一口</a>
+        <span>2018-10-08 23:14:15</span>
+      </div>
+
+
+
+      <p class="comment-text">完全讲出我的心声</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u165191344 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10022022" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10022031" data-cid="10022031" data-user_name="残殇乔" data-user_url="https://www.douban.com/people/140524441/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/140524441/"><img width="48" height="48" src="https://img1.doubanio.com/icon/user_normal.jpg" alt="残殇乔"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/140524441/">残殇乔</a>
+        <span>2018-10-08 23:16:20</span>
+      </div>
+
+
+
+      <p class="comment-text">顶上去</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u140524441 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10022031" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="comment-item" id="10022033" data-cid="10022033" data-user_name="允承" data-user_url="https://www.douban.com/people/morethangazer/" data-target_id="9689718" data-target_kind="1012" data-ref_cid="0">
+    <div class="avatar left">
+        <a href="https://www.douban.com/people/morethangazer/"><img width="48" height="48" src="https://img3.doubanio.com/icon/u1825245-24.jpg" alt="允承"></a>
+    </div>
+    <div class="content report-comment">
+      <div class="header">
+        <a href="https://www.douban.com/people/morethangazer/">允承</a>  (PURSUE OF FULFILLNESS)
+        <span>2018-10-08 23:16:45</span>
+      </div>
+
+
+
+      <p class="comment-text">我不同意 如果田战是沛公心腹 最后就也应该把他留下</p>
+
+      <div class="op-lnks">
+
+        <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">          来自豆瓣App        </a>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="group_banned">
+        <span class="gact hidden p_u1825245 p_admin p_intern fright">&gt;
+        <a href="javascript:;" data-cid="10022033" class="remove_comment">删除</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+<div id="last" data-last_page_start="900"></div>
+</div>
+
+
+
+
+
+
+
+
+        <div class="paginator">
+        <span class="prev">
+            &lt;前页
+        </span>
+
+
+
+                <span class="thispage">1</span>
+
+            <a href="?start=100#comments">2</a>
+
+
+            <a href="?start=200#comments">3</a>
+
+
+            <a href="?start=300#comments">4</a>
+
+
+            <a href="?start=400#comments">5</a>
+
+
+            <a href="?start=500#comments">6</a>
+
+
+            <a href="?start=600#comments">7</a>
+
+
+            <a href="?start=700#comments">8</a>
+
+
+            <a href="?start=800#comments">9</a>
+
+
+            <a href="?start=900#comments">10</a>
+
+        <span class="next">
+            <link rel="next" href="?start=100#comments">
+            <a href="?start=100#comments">后页&gt;</a>
+        </span>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+      </div>

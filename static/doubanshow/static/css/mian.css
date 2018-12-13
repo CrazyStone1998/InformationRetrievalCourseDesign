@@ -1,0 +1,56 @@
+html,body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+body {
+    background-image: url("../img/bg.jpg");
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+    background-attachment:fixed;
+}
+
+.navbar-brand {
+    background-image: url("../img/logo.png");
+    width: 80px;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.side-bar .list-group-item {
+    border: 0;
+    border-radius: 3px;
+    margin-bottom: 5px;
+
+}
+.list-group-item.active {
+    background-color: #098aff;
+}
+
+.login{
+    margin-right: 20px;
+}
+
+.register{
+    margin-left: 20px;
+}
+
+.input-group{
+    width: 300px;
+    height: 30px;
+}
+
+.btn-group{
+    margin-bottom: 20px;
+    margin-top: 50px;
+    width: 360px;
+    height: 20px;
+}
+
+.btn.btn-default{
+    width: 100px;
+    margin-top: 10px;
+    /*opacity: 0.1;*/
+    border:none;
+    /*background-color:rgba(0,0,0,0);*/
+}

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Douban</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.min.css" rel="stylesheet">
+    <link type="text/css" href="../static/css/main.css" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <div class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <a href="index.html" class="navbar-brand"></a>
+                </div>
+                <div class="nav navbar-nav">
+                    <router-link class="movie" to="/movie">电影剧场</router-link>
+                    <router-link class="tv"   to="/tv">网剧TV</router-link>
+                    <router-link class="book" to="/book">书香四溢</router-link>
+                    <router-link class="mine" to="/mine">我的收藏</router-link>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <div v-if="flag == false">
+                        <router-link to="/login" class="login" >登录</router-link>
+                        <router-link to="/register" class="register" >注册</router-link>
+                    </div>
+                    <div v-else>
+                        <router-link to="'mine_info" class="user_info" >{{ user_id }}</router-link>
+                    </div>
+                </ul>
+            </div>
+        </div>
+        <router-view></router-view>
+
+    </div>
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.min.js"></script>
+<script src="https://cdn.bootcss.com/vue-router/3.0.1/vue-router.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap-datepicker/1.8.0/locales/bootstrap-datepicker.fr.min.js"></script>
+<script src="../static/js/main.js"></script>
+</body>
+</html>
