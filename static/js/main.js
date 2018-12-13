@@ -325,10 +325,10 @@ var component_movie_child_detail = {
                 <hr style="border:2px dashed #987cb9" width="80%" color=#987cb9 SIZE=3>
                 <div class="row">
                     <div class="col-md-6">
-                        <img class="sentiment-img" :src="short_sentiment">
+                        <img class="sentiment-img-1" :src="short_sentiment">
                     </div>   
                     <div class="col-md-6">
-                        <img class="sentiment-img" :src="movie_sentiment">
+                        <img class="sentiment-img-2" :src="movie_sentiment">
 
                     </div>    
                 

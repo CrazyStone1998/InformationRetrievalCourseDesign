@@ -2,29 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="30d87e38-7c36-4589-8c9a-c6c952389eea" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/doubanshow/common/fuzzySearch.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doubanshow/common/snownlp.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doubanshow/common/stopwords.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doubanshow/common/wordCloud.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/doubanshow/static/css/mian.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/doubanshow/static/img/bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/doubanshow/static/img/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/doubanshow/static/js/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/mask.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InformationRetrievalCourseDesign/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/InformationRetrievalCourseDesign/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InformationRetrievalCourseDesign/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/InformationRetrievalCourseDesign/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InformationRetrievalCourseDesign/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/InformationRetrievalCourseDesign/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doubanshow/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/doubanshow/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doubanshow/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/doubanshow/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doubanshow/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/doubanshow/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doubanshow/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/doubanshow/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/main.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -57,8 +36,8 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="32" column="44" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="44" />
+            <state relative-caret-position="217">
+              <caret line="330" column="51" selection-start-line="330" selection-start-column="51" selection-end-line="330" selection-end-column="51" />
               <folding>
                 <element signature="n#style#0;n#hr#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h2#0;n#div#0;n#!!top" expanded="true" />
@@ -117,8 +96,8 @@
       <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+            <state relative-caret-position="187">
+              <caret line="171" column="21" lean-forward="true" selection-start-line="171" selection-start-column="21" selection-end-line="171" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -161,10 +140,10 @@
       <find>font</find>
       <find>size</find>
       <find>fre</find>
-      <find>img</find>
       <find>bar</find>
       <find>plt</find>
       <find>slider</find>
+      <find>img</find>
     </findStrings>
     <dirStrings>
       <dir>F:\Code\Py_CODE\InformationRetrievalCourseDesign\static\doubanshow\static\img</dir>
@@ -414,6 +393,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50067025" side_tool="true" weight="0.32928476" />
@@ -723,8 +703,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="32" column="44" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="44" />
+        <state relative-caret-position="217">
+          <caret line="330" column="51" selection-start-line="330" selection-start-column="51" selection-end-line="330" selection-end-column="51" />
           <folding>
             <element signature="n#style#0;n#hr#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h2#0;n#div#0;n#!!top" expanded="true" />
@@ -736,8 +716,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+        <state relative-caret-position="187">
+          <caret line="171" column="21" lean-forward="true" selection-start-line="171" selection-start-column="21" selection-end-line="171" selection-end-column="21" />
         </state>
       </provider>
     </entry>

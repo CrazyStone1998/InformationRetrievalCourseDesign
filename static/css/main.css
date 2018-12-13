@@ -168,7 +168,12 @@ body{
     color: #d2322d;
 }
 
-.sentiment-img{
+.sentiment-img-1{
+    max-width: 400px;
+    max-height: 400px;
+    margin-left: 100px;
+}
+.sentiment-img-2{
     max-width: 400px;
     max-height: 400px;
     margin-right: 50px;
