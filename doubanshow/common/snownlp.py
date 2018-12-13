@@ -31,3 +31,5 @@ def pltView(list, path):
 
         plt.savefig(path)
 
+        plt.clf()
+
