@@ -106,6 +106,8 @@ def movieDetail(request):
                 'message':'SUCCESS',
                 'data':{
                     'word_clould': img.file
+                    'short_sentiment_img': xxoo.img,
+                    'movie_sentiment_img': xxoo.img,
                     'short_comment': [
                         {
                             'id':xxoo,

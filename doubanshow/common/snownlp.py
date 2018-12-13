@@ -25,7 +25,7 @@ def pltView(list, path):
         # 添加标题
         plt.title('sentiment analysis')
         # 添加刻度标签
-        plt.xticks(range(11), ['hate', '', '', '', '', '', '', '', '', '', 'love'])
+        plt.xticks(range(11), ['hatest', '', 'hate', '', 'normal', '', 'like', '', 'love', '', 'lovest'])
         # 设置Y轴的刻度范围
         plt.ylim([0, 200])
 
