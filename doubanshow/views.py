@@ -9,6 +9,7 @@ from django.views.decorators.cache import never_cache
 from django.http import JsonResponse
 from doubanshow import models
 from w3lib.html import remove_tags
+from InformationRetrievalCourseDesign.settings import BASE_DIR
 from doubanshow.common.wordCloud import wordCloud
 from doubanshow.common.fuzzySearch import searchResult
 from doubanshow.common.snownlp import pltView
@@ -193,11 +194,11 @@ def movieDetail(request):
                 }
             )
 
-        pltView(short_sentiment_list, 'F:/Code/Py_CODE/InformationRetrievalCourseDesign/static/img/'+movie_id+'_short.jpg')
-        pltView(movie_sentiment_list, 'F:/Code/Py_CODE/InformationRetrievalCourseDesign/static/img/'+movie_id+'_movie.jpg')
+        pltView(short_sentiment_list, BASE_DIR+'/static/img/'+movie_id+'_short.jpg')
+        pltView(movie_sentiment_list, BASE_DIR+'/static/img/'+movie_id+'_movie.jpg')
 
 
-        if not os.path.exists('F:/Code/Py_CODE/InformationRetrievalCourseDesign/static/img/'+movie_id+'.jpg'):
+        if not os.path.exists(BASE_DIR+'/static/img/'+movie_id+'.jpg'):
             wordCloud(remove_tags(original_text), movie_id)
 
         return JsonResponse(
